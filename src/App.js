@@ -13,9 +13,11 @@ function App() {
       {/* <Navbar /> */}
 
       <Intro />
-      {/* <Features />
-      <Browsers />
+      <Features />
       <Faq />
+      {/* 
+      <Browsers />
+      
       <Contact />
 
       <Footer /> */}
