@@ -10,17 +10,20 @@ import Intro from "./scenes/intro";
 function App() {
   return (
     <div className="">
-      {/* <Navbar /> */}
+      <Navbar />
 
       <Intro />
       <Features />
       <Faq />
+      <Contact />
+      <Footer />
+
       {/* 
       <Browsers />
       
-      <Contact />
+      
 
-      <Footer /> */}
+       */}
 
     </div>
   );

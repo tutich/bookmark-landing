@@ -4,8 +4,7 @@ import Img from "../../assets/images/illustration-hero.svg";
 const Intro = () => {
   return (
     <>
-      <div className=" container mx-auto justify-center py-6 px-6 lg:flex ">
-        {/* Features Pricing Contact Login */}
+      <div className="w-[90%] lg:w-[80%] mx-auto justify-center py-6 lg:flex">
         <div className="w-1/2">
           <h1 className="text-3xl font-semibold text-blue-300">
             A Simple Bookmark Manager
