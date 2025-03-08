@@ -3,6 +3,9 @@ import logoImg from "../../src/assets/images/logo-bookmark.svg";
 import hamburger from "../assets/images/icon-hamburger.svg";
 import close from "../assets/images/icon-close.svg";
 
+import facebook from "../assets/images/icon-facebook.svg";
+import twitter from "../assets/images/icon-twitter.svg";
+
 const navItems = [
   {
     id: 1,
@@ -54,27 +57,40 @@ const Navbar = () => {
 
       {isOpen && (
         <>
-          <div className="fixed inset-0 bg-blue-300/90 z-40"></div>
-          <div className="fixed top-0 right-0 z-50 h-screen w-[90%] mx-auto flex flex-col items-center transition-all duration-300 ">
-            <button
-              className="absolute py-4 top-6 right-6"
-              onClick={() => setIsOpen(false)}
-            >
-              <img src={close} alt="close" />
-            </button>
-            <ul className="py-8">
+          <div className="fixed inset-0 bg-blue-300/90 backdrop-blur-sm z-40"></div>
+
+          <div className="fixed top-4 z-50 left-1/2 -translate-x-1/2 h-screen w-[90%] max-w-md flex flex-col items-center text-center transition-all duration-300 ">
+            <div className="flex items-center justify-between px-2 py-4 w-full">
+              <img src={logoImg} alt="logo" className="" />
+              <button className="" onClick={() => setIsOpen(false)}>
+                <img src={close} alt="close" />
+              </button>
+            </div>
+
+            <ul className="flex flex-col mt-6 py-6 w-full items-center list-none">
               {navItems.map((item) => (
-                <li
-                  key={item.id}
-                  className="uppercase text-white font-medium text-xl py-3"
-                >
-                  {item.title}
-                </li>
+                <div className="w-full">
+                  <hr className="w-full border-gray-500" />
+                  <li
+                    key={item.id}
+                    className="uppercase text-white font-normal text-xl py-6 flex justify-center"
+                  >
+                    {item.title}
+                  </li>
+                </div>
               ))}
+
+              <hr className="w-full border-gray-500 mb-6" />
+              <button className="text-blue-50 text-lg flex items-center font-normal justify-center p-2 w-[100%] h-[38px] border-solid border-4 rounded-md">
+                Login
+              </button>
+
             </ul>
-            <button className="text-blue-50 flex items-center justify-center text-sm p-[14px] w-full h-[28px] border-solid border-4 rounded-md">
-              Login
-            </button>
+
+            <div className="flex items-center gap-6 py-8 mt-36">
+              <img src={facebook} alt="fb" />
+              <img src={twitter} alt="x" />
+            </div>
           </div>
         </>
       )}
