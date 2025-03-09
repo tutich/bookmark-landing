@@ -38,7 +38,7 @@ const Faq = () => {
   return (
     <div className="mx-auto">
       <div className="py-6">
-        <h1 className="text-blue-300 lg: text-xl lg:text-2xl font-bold text-center mb-4">
+        <h1 className="text-blue-300 text-xl lg:text-2xl font-bold text-center mb-4">
           Frequently Asked Questions
         </h1>
         <p className="text-blue-100 w-[90%] lg:w-full text-sm text-center mx-auto mb-3">
